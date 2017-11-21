@@ -5,8 +5,21 @@
     <title>Title</title>
 </head>
 <body>
+<input id="btn" type="button" value="点击" >
 <script>
-    "ues strict"
+    "ues strict";
+    function gg() {
+        setTimeout(function () {
+
+        alert("ssssss");
+        },1000);
+    }
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click",function () {//绑定事件的第二种写法
+       setTimeout(function () {
+           alert("ssssssssssssssssssss");
+       },1000)
+    });
     let foo = 1;
     t();
     function t(){
@@ -27,6 +40,7 @@
         }
         alert(p);
     }
+
 </script>
 
 </body>
