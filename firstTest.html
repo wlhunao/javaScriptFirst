@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    var s = 8;
+    for(var i=0;i<5;i++){
+        console.log(i)
+        setTimeout(function(){
+            console.log(i)
+        },1)
+        //setTimeout 在所有代码执行完之后再执行
+    }
+    console.log(i);
+    console.log(s);
+    "use strict";
+    let q = 9;
+    console.log(q);
+    // 用const定义的 变量为常量 不能重复定义
+    //会和 let 共享作用域
+    const e = 9;
+    //let e = 8;
+    //普通函数
+    function first(l) {
+        console.log(l);
+    }
+    //函数定义之后要被调用 才会生效 才会进入内存中
+    first(9);
+    //匿名函数
+    let n = function () {
+        console.log("这是匿名函数")
+    }
+    //构造函数
+     let g = new Object();
+
+</script>
+
+</body>
+</html>

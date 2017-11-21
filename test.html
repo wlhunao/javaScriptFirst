@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    "use strict";
+    (function () {
+        window.a = {};
+        a = function (i1,i2) {
+            console.log(i1+i2);
+        };
+        a.reduce = function (k1,k2) {
+            console.log(k1-k2);
+        };
+        a.ride = function (c1,c2) {//multiplication 乘法
+            console.log(c1*c2);
+        };
+        a.division = function (d1,d2) {//division 除法 分开
+            console.log(d1/d2);
+        };
+        window.n ={};
+         n = 8;
+        console.log(n);
+    })();
+    a(1,2);
+    a.reduce(3,4);
+    a.ride(2,9);
+    a.division(2,3);
+    console.log(n);
+</script>
+</body>
+</html>

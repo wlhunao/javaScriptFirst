@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    "use stcrit";
+
+    console.log(NaN == NaN);
+    console.log(1/0);//infinity  无限大
+    let str = "ffffffff";
+    let n = 2;
+    console.log("这是字符串"+str+"拼接");
+    console.log(`这是字${str}符串拼接${n}`);
+    function test(t1,t2){
+        //带有默认值得语法
+        //当传入的参数为假时 会给该参数赋默认值
+        //js中的假值：false ,"" ,0 +0 , -0 ,undifine,null,NaN
+        //js中为真的特殊情况 ："空格" , "false"
+        //用  ！！  判断值得真假
+        t1 = t1 || 3;
+        t2 = t2 || 0;
+        console.log(`${t1}${t2}`);
+    }
+    test(false,2);
+    //函数指针 函数做为参数
+    function f1(f) {
+        f();
+    }
+    let f2 = function () {
+        console.log("这是函数的指针");
+    };
+    f1(f2);
+    //函数作为返回值
+    function ff() {
+        return function () {
+            console.log("函数作为返回值");
+        }
+    }
+    ff()();
+    console.log(Number(0b1000100));//68
+    console.log(isNaN(NaN));//true
+    //NaN 的底层实现
+    function hh(n) {
+        let nn = Number(n);
+        if(typeof (nn) == typeof (NaN)){
+            return true;
+        }
+        return false;
+    }
+    //数字类型
+    console.log(typeof(NaN));//number
+    console.log(hh(""));//true
+    console.log(Number(true));//1 false 是0
+    console.log(Number(""));// 0
+    console.log(Number(" "));//0
+    console.log(Number("sdss"));//NaN
+    console.log(Number("12sd"));//NaN
+    console.log(Number("12.89"));//12.89
+    console.log(Number([]));//0
+    console.log(Number([[]]));//0
+    console.log(Number(["o"]));//NaN
+    console.log(Number(["i",":"]));//NaN
+    console.log(Number([6]));//6
+    //parseInt();  用于dom 操作时 格式化数据  取整
+    console.log(parseInt(8));//8
+    console.log(parseInt(8.9));//8
+    console.log(parseInt(9.08));//9
+    console.log(parseInt("09.8p"));//9
+    //parseFloat(); 常用语dom操作时格式化数据
+    console.log(parseFloat("9。0p"));//9
+    //toFixed()  可以指定小数的位数 当指定为0时取整 支持四舍五入 支持自动补0
+    console.log((100).toFixed(3));//100.000
+    console.log(typeof ((89.09).toFixed(1)));//89.1
+    console.log((98.44).toFixed(1));//98.4
+    //减 乘 除 取模 都可以将字符串转换为数字
+    console.log(2-"1");//1
+    console.log("2"-2);//0
+    console.log("3"+9);//39 字符串拼接
+    //将数字直接转为字符串
+    console.log(typeof (123+""));
+    console.log(true+"");//字符串 true
+    //转换真 假  true 和false 、
+    console.log(!!0);//false
+    console.log(!!1);//true
+    console.log(!!true);//true反之false
+</script>
+</body>
+</html>
